@@ -29,7 +29,7 @@ void sell(int serial) {
 	bool exist = false;
 	Instrument sel("", 0);
 	int count = 0, index = 0, cnt = 0;
-
+	cout << "Selling instrument with serial number: " << serial << endl;
 	for (Instrument temp : list) {//check if there is an instrument with the same serial number
 		if (serial == temp.getSerial()) {
 			exist = true;
@@ -43,7 +43,7 @@ void sell(int serial) {
 	}
 
 	else {
-		cout << "Selling instrument with serial number: " << serial << endl;
+		cout << "Instrument with serial number: " << serial <<" sold successfully" << endl;
 		list.erase(list.begin() + index);
 	}
 	cout << endl;
